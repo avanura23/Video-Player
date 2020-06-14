@@ -16,10 +16,15 @@ btn.onclick = function () {
     togglePlayPause();
 }
 
+video.addEventListener("mouseover", function( event ) {
+    btn.classList.remove("hidden");
+})
+
 video.addEventListener('timeupdate', function () {
     var sliderPosition = video.currentTime / video.duration;
     slider.style.width  = sliderPosition * 100 + "%";
     if (video.ended) {
         btn.className = "play";
     }
-})
+});
+

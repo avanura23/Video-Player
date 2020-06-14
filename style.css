@@ -1,3 +1,4 @@
+/* 
 .container {
     display: flex;
     background: #ccc;
@@ -5,9 +6,16 @@
     align-items: center;
 }
 
+*/
+
+body {
+    margin: 0;
+}
+
 .video {
     width: 100%;
 }
+
 
 .c-video {
     width: 100%;
@@ -30,15 +38,14 @@
     transition: all 0.4s;
 }
 
-.buttons {
-    padding: 10px;
-}
-
 .buttons button {
     background: none;
     border: 0;
     outline: 0;
     cursor: pointer;
+    position: absolute;
+    left: 45%;
+    top: 40%;
 }
 
 .buttons button:before {
@@ -47,9 +54,13 @@
     width: 30px;
     height: 30px;
     display: inline-block;
-    font-size: 28px;
+    font-size: 100px;
     color: #fff;
     -webkit-font-smoothing: antialiased;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .buttons button.play:before {
@@ -72,4 +83,4 @@
     height: 10px;
     background-color: orangered;
     width: 100px;
-}
+} 
