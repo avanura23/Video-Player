@@ -1,6 +1,7 @@
 var video = document.querySelector(".video");
 var slider = document.querySelector(".slider-color");
 var btn = document.getElementById("play-pause");
+var videoContainer = document.querySelector(".c-video")
 
 function togglePlayPause() {
     if (video.paused) {
@@ -16,9 +17,21 @@ btn.onclick = function () {
     togglePlayPause();
 }
 
-video.addEventListener("mouseover", function( event ) {
+// video.addEventListener("mouseover", function() {
+//     btn.classList.remove("hidden");
+// });
+
+// video.addEventListener("mouseout", function () {
+//     btn.classList.add("hiddden");
+// })
+
+videoContainer.onmouseover = function () {  
     btn.classList.remove("hidden");
-})
+}
+
+videoContainer.onmouseout = function () {
+    btn.classList.add("hidden");
+}
 
 video.addEventListener('timeupdate', function () {
     var sliderPosition = video.currentTime / video.duration;
