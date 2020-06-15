@@ -2,6 +2,7 @@ var video = document.querySelector(".video");
 var slider = document.querySelector(".slider-color");
 var btn = document.getElementById("play-pause");
 var videoContainer = document.querySelector(".c-video")
+var volumeControl = document.getElementById("vol-control");
 
 function togglePlayPause() {
     if (video.paused) {
@@ -41,3 +42,11 @@ video.addEventListener('timeupdate', function () {
     }
 });
 
+
+volumeControl.addEventListener('change', function () {  
+    video.volume = this.value / 100;
+});
+
+volumeControl.addEventListener('input', function () {
+    video.volume = this.value / 100;
+});
