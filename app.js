@@ -3,6 +3,7 @@ var slider = document.querySelector(".slider-color");
 var btn = document.getElementById("play-pause");
 var videoContainer = document.querySelector(".c-video")
 var volumeControl = document.getElementById("vol-control");
+var progressBar = document.getElementById("progress-bar");
 
 function togglePlayPause() {
     if (video.paused) {
@@ -36,10 +37,12 @@ videoContainer.onmouseout = function () {
 
 video.addEventListener('timeupdate', function () {
     var sliderPosition = video.currentTime / video.duration;
+    // progressBar.value = sliderPosition * 100;
     slider.style.width  = sliderPosition * 100 + "%";
     if (video.ended) {
         btn.className = "play";
     }
+    
 });
 
 
