@@ -12,7 +12,7 @@
 
 <body>
     <div class="c-video">
-      <video src="video/video.mkv" class="video"></video>
+      <video src="video/video.mp4" class="video"></video>
       <button id="play-pause" class="hidden"></button>
       <div class="controls">
         <div class="slider">
@@ -20,17 +20,14 @@
           <!-- <input id="progress-bar" type="range" min="0" max="100" step="1" value="0"></input> -->
         </div>
         <div class="volume-controls">
-          <button>
-            <i class="fa fa-volume-down"></i>
-          </button>
+          <ion-icon class="volume-icon" id="mute" name="volume-mute"></ion-icon>
           <input id="vol-control" type="range" min="0" max="100" step="1"></input>
-          <button>
-            <i class="fa fa-volume-up"></i>
-          </button>
+          <ion-icon class="volume-icon" id="max-volume" name="volume-high"></ion-icon>
         </div>
       </div>
     </div>
   </div>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   <script src="https://kit.fontawesome.com/fba5b46cec.js" crossorigin="anonymous"></script>
   <script src="app.js"></script>
 </body>
